@@ -10,20 +10,16 @@ function isSq(Num) {
       return a + b;
     });
 
-    var x = arrayToAdd;
-
     if (sumOfSq === 1) {
       console.log("sum of squares = "+ sumOfSq);
       return true;
     } else {
       arrayToAdd = [];
-      console.log(sumOfSq);
-      isSq(55);
+      return isSq(sumOfSq);
     }
-//    };
-
-
+    console.log('false');
+    return false;
 };
 
-isSq(19);
+isSq(33);
 // I NEED TO CONVERT THE OUTPUT ARRAY INTO A DIFF DATATYPE
