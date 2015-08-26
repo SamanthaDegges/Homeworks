@@ -7,19 +7,13 @@ var isHappy = function(Num) {
     //var lengthOfNumString = stringOfNum.length;
     //console.log('i is:' + i);
     var digit = NumToString[i];
+  //  var digitB = NumToString[i+1];
+
     var squaredDigit = Math.pow(digit, 2);
-
-    console.log('squared is: '+squaredDigit);
-    sumOfSquared = squaredDigit;
-    console.log(sumOfSquared);
   }
-
-
-  //sq each
-  //add
-  //when equal 1; return happy number
-  //var x = Math.pow(digit,2);
-  //console.log(digit, x);
+  var test = isHappy(NumToString[i+1]);
+  console.log(test);
+  //var sumofSquared = squaredDigit;
 };
 
 isHappy(17);
