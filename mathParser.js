@@ -1,6 +1,6 @@
 function numberParser(oneString) {
   //console.log(oneString);
-  var numbers = oneString.match(/[^\W]/g);
+  var numbers = oneString.match(/([^\W])/g);
   console.log(numbers);
   var x = numbers.join().split();
   console.log(x);
