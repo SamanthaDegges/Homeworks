@@ -1,6 +1,6 @@
 function emailParser(strings) {
   var strings = strings;
-  var x = strings.match(/\w+@\w+\.(\w+)\.?(\w+)?/gmi);
+  var x = strings.match(/\w+(\.\w+)*@\w+\.\w+(\.\w+)+/g);
   console.log(x);
 }
 

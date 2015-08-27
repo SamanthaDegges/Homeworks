@@ -1,11 +1,16 @@
-function mathParser(oneString) {
+function numberParser(oneString) {
   //console.log(oneString);
-  var first = oneString.split(/d{0,9\s?/);
-  console.log(first);
-//  this.parseInt();
+  var numbers = oneString.match(/[^\W]/g);
+  console.log(numbers);
+  var x = numbers.join().split();
+  console.log(x);
+}
+
+function symbolParser(oneString) {
 
 }
 
 
 
-mathParser("3 + 8 * 21-11");
+numberParser("3 + 8 * 21-11");
+symbolParser("3 + 8 * 21-11");
