@@ -1,5 +1,24 @@
-
+body {
+  background-color: #092222;
+  color: white;
+  padding: 2em;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 #gameBoard div {
-background-color: pink;
+  margin: 10px;
+  display: block;
+  background-color: pink;
+  height: 10em;
+  width: 10em;
+  border: 4px solid grey;
+}
+
+.selectFalse {
+  background-color: red;
+}
+
+.selectTrue {
+  background-color: green;
 }
