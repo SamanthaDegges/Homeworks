@@ -1,17 +1,18 @@
 body {
-  background-color: #092222;
-  color: white;
   padding: 2em;
+  max-width: 1000px;
+}
+
+#gameBoard {
   margin-right: auto;
   margin-left: auto;
 }
 
-#gameBoard div {
+.tile {
   margin: 10px;
-  display: block;
   background-color: pink;
-  height: 10em;
-  width: 10em;
+  height: 100px;
+  width: 100px;
   border: 4px solid grey;
 }
 
