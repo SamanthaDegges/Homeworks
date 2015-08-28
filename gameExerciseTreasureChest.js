@@ -5,7 +5,7 @@ $(document).ready(function() {
   console.log(winningTile);
 
   var gameState = {
-    //'gameWon': "You Win.",
+    'gameWon': "You Win.",
     'gameEnded': "Game Over.",
     'gameRunning': "Click to find the treasure."
   };
@@ -19,26 +19,31 @@ $(document).ready(function() {
     $('strong').text(--guesses);
     $tile.addClass('red');
 
+    if (winCheck($tile)) {
+    $tile.addClass('green');
+    gameStateChange();
+    }
 
-    if (IsGameOn($tile)) {
-      console.log(currentGameState);
-      $('#title').text(currentGameState);
-    } //else {
-    //  $tile.addClass('red');
-    //}
+    if (IsGameOver($tile)) {
+      gameStateChange();
+    }
+
   });
 
-  var IsGameOn = function($clicked) {
-    if ($clicked.data('id') === winningTile || guesses === 0) {
+  var IsGameOver = function($clicked) {
+    if (guesses === 0) {
       return currentGameState = gameState.gameEnded;
     }
   }
 
   var winCheck = function($clickedTile) {
     if ($clickedTile.data("id") === winningTile) {
-      $tile.addClass('green');
       return currentGameState = gameState.gameWon;
     }
+  }
+
+  var gameStateChange =function() {
+    $('#title').text(currentGameState);
   }
 
 })
