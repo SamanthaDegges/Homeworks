@@ -2,6 +2,11 @@
 $(document).ready(function() {
   var guesses = 3;
   var winningTile = Math.floor((Math.random() * 9) + 1);
+  var gameState = {
+    gameWon: "You Win.",
+    gameLost: "Game Over.",
+    gameRunning: "Click to find the treasure."
+  };
   console.log(winningTile);
 
   $('.tile').on('click', function(event) {
@@ -11,7 +16,7 @@ $(document).ready(function() {
     winCheck($this);
 
     if (guesses === 0) {
-      $('#title').text("Game Over.");
+      $('#title').text(gameState.gameLost);
     } else {
       console.log("Game Running.");
     }
