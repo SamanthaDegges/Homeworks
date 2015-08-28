@@ -6,21 +6,19 @@
 }
 
 #gameBoard {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-img {
+  max-width: 500px;
+  padding: 1em;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.tile {
-  margin: 10px;
+div .play-again {
   height: 100px;
-  width: 100px;
-  margin-right
+}
+
+.tile {
+  height: 100px;
 }
 
 .red {
