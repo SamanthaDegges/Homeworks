@@ -5,7 +5,7 @@ $(document).ready(function() {
   console.log(winningTile);
 
   var gameState = {
-    'gameWon': "You Win.",
+    'gameWon': "You Win!",
     'gameEnded': "Game Over.",
     'gameRunning': $("title").text()
   };
