@@ -1,6 +1,8 @@
-body {
+.container-fluid {
   padding: 2em;
   max-width: 1000px;
+  color: #97475E;
+  font-family: FontAwesome;
 }
 
 #gameBoard {
@@ -8,12 +10,17 @@ body {
   margin-left: auto;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .tile {
   margin: 10px;
-  background-color: pink;
   height: 100px;
   width: 100px;
-  border: 4px solid grey;
+  margin-right
 }
 
 .red {

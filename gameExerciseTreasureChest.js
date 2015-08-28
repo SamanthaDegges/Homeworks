@@ -20,8 +20,8 @@ $(document).ready(function() {
     $tile.addClass('red');
 
     if (winCheck($tile)) {
-    $tile.addClass('green');
-    gameStateChange();
+      $tile.addClass('green');
+      gameStateChange();
     }
 
     if (IsGameOver($tile)) {
