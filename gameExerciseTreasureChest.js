@@ -7,7 +7,7 @@ $(document).ready(function() {
   var gameState = {
     'gameWon': "You Win.",
     'gameEnded': "Game Over.",
-    'gameRunning': "Click to find the treasure."
+    'gameRunning': $("title").text()
   };
 
   currentGameState = 'gameRunning';
@@ -16,18 +16,20 @@ $(document).ready(function() {
 
   $('.tile').on('click', function(event) {
     var $tile = $(this);
-    $('strong').text(--guesses);
-    $tile.addClass('red');
+    if (currentGameState === 'gameRunning') {
+      $('strong').text(--guesses);
+      $tile.empty();
 
-    if (winCheck($tile)) {
-      $tile.addClass('green');
-      gameStateChange();
+      if (winCheck($tile)) {
+        $tile.empty();
+        $tile.html('<img src="kitty-grey.png" class="img-responsive center-block">');
+        gameStateChange();
+      }
+
+      if (IsGameOver($tile)) {
+        gameStateChange();
+      }
     }
-
-    if (IsGameOver($tile)) {
-      gameStateChange();
-    }
-
   });
 
   var IsGameOver = function($clicked) {
